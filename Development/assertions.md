@@ -83,6 +83,10 @@ Screens
 
 + QA screens can have from 1 to 4 interactions buttons.
 
++ In QA screens interaction button advance to another screen, this screen could be unique or two or more buttons can advance to the same screen.
+
++ Number, date and slideshow screens always advance to a unique screen without depending on the type of response.
+
 + Slideshow screens can contain 2 to 4 slides.
 
 + The last slide of a slideshow always has an OK button. 
@@ -110,7 +114,3 @@ Screens
 + A user interaction that changes a field in the module profile shows a dead-end screen with a message and an OK button that redirects to the session first screen or the first screen of the first session.
 
 :exclamation: **Alert**: In the actual wireframe version the only screen "wrong" with the past statements is "NRT No 2".
-
-
-
-

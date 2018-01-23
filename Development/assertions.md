@@ -20,6 +20,10 @@ Vocabulary / Index
 
 [**SCREEN**](#screens): The content unit. It consists of text, animations and UI. For now there are 3 types of screens: QA screens, slideshow screens and date screens.
 
+[**TIPS**] 
+
+[**SOS**] -> http://intercom.com
+
 
 App
 ---

@@ -26,6 +26,7 @@ App
 
 + The app can have infinite modules.
 
+
 Profile
 -------
 
@@ -57,17 +58,29 @@ Module
 Sessions
 --------
 
-+ A session can be active (ready to be consumed by the user) or not active (the user must first consume previous sessions to transform a non-active session into active).
++ The first session always define the module profile.
+
++ The first session can not contain logics dependent on module profile.
+
++ A session can be active (ready to be consumed by the user) or not active (the user must first consume previous session to transform a non-active session into active).
 
 + The user must finish the first session to have access to the second one and so on.
 
-+ If the user didnt finish the session, the session is not complete and the next time they start the the module the session start again.
++ A bussines logic can apply to change session state (active or disable) (ej: quit date). 
+
++ If the user didnt finish the session, the session is not complete and the next time they start the the module the session start over.
 
 + The session is recorded as complete only if the user finishes it.
 
-+ All sessions have an "END" screen. If the user does not give "OK" to the end screen the session is not recorded.
++ All sessions have an unique "END" screen. (all paths end in the same screen).
 
-+ At the end of the session the user is redirected to the dashboard.
++ At the end of the session the user is redirected to the app dashboard or to the first screen of the next session.
+
+#### Possible functionalities in upgrades
+
++ Store the session state (in wich screen the user left the session)
+
++ Ask the user when start the module after quit in middle of the session if they want to start over or continue in the last screen-
 
 
 Screens
@@ -82,10 +95,6 @@ Screens
 + Each screen can be shown or not to the current user depending on the module profile.
 
 + QA screens can have from 1 to 4 interactions buttons.
-
-+ In QA screens interaction button advance to another screen, this screen could be unique or two or more buttons can advance to the same screen.
-
-+ Number, date and slideshow screens always advance to a unique screen without depending on the type of response.
 
 + Slideshow screens can contain 2 to 4 slides.
 
@@ -107,10 +116,19 @@ Screens
   3. Image: Optional. Gif animado.
   4. Close button. 
 
++ UI components always redirect to a specific and only one screen. The only exception is the final screen of the session that redirects to the dashboard.
+
++ UI components can have special functions like "Module Start Over" or "Session Start Over".
+
++ The "END" screen have to UI componentes "GO TO DASHBOARD" and "START NEXT SESSION". 
+
+:exclamation: **Alert**: In the current wireframe version the only screen "wrong" with the past statements are "NRT No 2" from session 2 and "Calendar" from session 1.2.
+
+
+#### Possible functionalities in upgrades
+
 + Some user interactions can add/delete/modify fields in the module profile.
 
-+ A user interaction that changes a field in the module profile restart the actual session or the complete module. 
 
-+ A user interaction that changes a field in the module profile shows a dead-end screen with a message and an OK button that redirects to the session first screen or the first screen of the first session.
 
-:exclamation: **Alert**: In the actual wireframe version the only screen "wrong" with the past statements is "NRT No 2".
+

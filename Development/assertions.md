@@ -14,7 +14,7 @@ Vocabulary / Index
 
 [**BLOG**](#blog): Entries from medium.com.
 
-[**MODULE**](#modyle): Course. It consists of a distributive page with active an non active sessions. The only one in the v1.0 is "STOP SMOKING".
+[**MODULE**](#module): Course. It consists of a distributive page with active an non active sessions. The only one in the v1.0 is "STOP SMOKING".
 
 [**SESSION**](#sessions): Chapters of the module. It consists of screens.
 

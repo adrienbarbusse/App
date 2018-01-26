@@ -3,7 +3,7 @@ ASSERTIONS
 
 **Author**: Juan Peist juan@john.cat
 
-**Last update**: January 22th 2018
+**Last update**: January 26 2018
 
 Vocabulary / Index
 ------------------
@@ -18,11 +18,11 @@ Vocabulary / Index
 
 [**SESSION**](#sessions): Chapters of the module. It consists of screens.
 
-[**SCREEN**](#screens): The content unit. It consists of text, animations and UI. For now there are 3 types of screens: QA screens, slideshow screens and date screens.
+[**SCREEN**](#screens): The content unit. It consists of text, animations and UI. For now there are 2 types of screens: QA screens, slideshow screens.
 
-[**TIPS**] 
+[**TIPS**](#tips): Section. TIPS that will help the user to fulfill the objective of the module.
 
-[**SOS**] -> http://intercom.com
+[**SOS**](#sos): UI that opens a chat or contact form (third party service: [intercom.com](https://www.intercom.com/)) 
 
 
 App
@@ -38,13 +38,27 @@ Profile
 
 + The user can modify the general fields.
 
-+ The user can not see or modify a module profile. These are modified depending on the user's interactions in the sessions.
++ The user can turn off and on a module.
+
++ The user can not modify other module progiel other than ON/OFF. These are modified depending on the user's interactions in the sessions.
+
++ Turn off a module preserve all the data (soft delete).
 
 
 Blog
 ----
 
-TODO: develop tag / profile filter system assertions.
++ The user will see blog entries retrieved from a specific publication of [medium.com](https://medium.com/) via [RSS feed](https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds)
+
++ The tags of the blog entries to be shown correspond to the modules profiles.
+
++ The user will only see 4 entries at a time. **@adrien: Let's talk about this**
+
+#### Possible functionalities in upgrades
+
++ Retrieve the entries from medium.com and store them in the lify database.
+
++ Set entries as read in lify database
 
 
 Module
@@ -54,9 +68,11 @@ Module
 
 + A module is accesible from the dashboard page.
 
-+ A module can be reset from the user's profile.
++ A module can be reset from the user's profile. (hard delete).
 
 + When the user reset the module all the data associeted with the module is deleted.
+
++ Each module will have a menu with: TIPS (access to the tips section) and BACK TO THE DASHBOARD.
 
 
 Sessions
@@ -78,13 +94,13 @@ Sessions
 
 + All sessions have an unique "END" screen. (all paths end in the same screen).
 
-+ At the end of the session the user is redirected to the app dashboard or to the first screen of the next session.
++ At the end of the session the user can be redirected to the app dashboard, the next session or start over the finished session again.
 
 #### Possible functionalities in upgrades
 
 + Store the session state (in wich screen the user left the session)
 
-+ Ask the user when start the module after quit in middle of the session if they want to start over or continue in the last screen-
++ Ask the user when start the module after quit in middle of the session if they want to start over or continue in the last screen.
 
 
 Screens
@@ -92,8 +108,6 @@ Screens
 
 + The screens can be of four types
   1. QA
-  2. Number
-  3. Date
   4. Slideshow
 
 + Each screen can be shown or not to the current user depending on the module profile.
@@ -112,7 +126,7 @@ Screens
   1. Title: Required. Max characters limition. Default: no
   2. Body text: Optional. Max characters limitation. Default: no
   3. Image: Optional. Gif animado. Default: no
-  4. UI: Optional. Button/s, date or number fields. Default: "OK" button.
+  4. UI: Optional. Button/s 4 maximum, date or number fields. Default: "OK" button.
 
 + Each slide of the slideshow contains:
   1. Title: Required. Max characters limition.
@@ -120,18 +134,39 @@ Screens
   3. Image: Optional. Gif animado.
   4. Close button. 
 
-+ UI components always redirect to a specific and only one screen. The only exception is the final screen of the session that redirects to the dashboard.
++ UI components always redirect to a specific and only one screen.
 
 + UI components can have special functions like "Module Start Over" or "Session Start Over".
 
-+ The "END" screen have to UI componentes "GO TO DASHBOARD" and "START NEXT SESSION". 
++ The LAST screen always have 3 UI: Go to dashboard, session start over & start next session.
 
 :exclamation: **Alert**: In the current wireframe version the only screen "wrong" with the past statements are "NRT No 2" from session 2 and "Calendar" from session 1.2.
 
-
 #### Possible functionalities in upgrades
 
-+ Some user interactions can add/delete/modify fields in the module profile.
+  + More UI types
+
+
+Tips
+----
+
++ Show tips based on a business logic, ej: One per day.
+
++ Each tip is displayed on a single screen.
+
++ Each tip contains:
+  1. Title: Required. Max characters limition.
+  2. Body text: Optional. Max characters limitation.
+  3. Image: Optional. Gif animado.
+
++ After seeing a tip the user returns to the active session.
+
+
+Sos
+---
+
++ Button present in each module that gives access to a chat or contact form via [intercom](https://www.intercom.com)
+
 
 
 

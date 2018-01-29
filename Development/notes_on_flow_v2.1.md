@@ -1,21 +1,26 @@
 NOTES ON FLOW
 =============
 
-+ !!! Carefully review the flow. There are several changes regarding wireframes. !!!
+Carefully review the flow. There are several changes regarding wireframes. !!!
 
-+ How old => birthday.
+Modifications & updates of wireframe definitions
+------------------------------------------------
+
++ How old are you = birthday. (better age tracking across time)
+
++ The first screen if the user do not have an active session is "Welcome" with two UIs: Log in & Sign up.
+
++ Sign up process start with profile question (birthday, gender, work)
+
++ If the user exist (email), they will redirected to the log in page. 
 
 + There is no need to verify email to start using the app, only to send transactionals emails.
 
-+ Message machine (info, warning, error).
++ Validations and communications with the user will be made through a "message machine" with 3 type of message: Info, warning & error.
 
-+ Edit profile is more extensive than the current wireframe version. No Overlay.
++ Edit profile is more extensive than the current wireframe version. Maybe is not enough a overlay.
 
-+ En todos los módulos el perfil de usuario (smoker type) será del tipo: smoker_type_1, smoker_type_2, etc.
-
-+ IMPORTANT: predefine module profile fields.
-
-+ END screen in session with 3 options:
++ END screen in sessions with 3 options:
   
   + Next session
 
@@ -29,4 +34,5 @@ NOTES ON FLOW
 
   + ON/OFF
 
-+ Define target browser. No support to previous ones.
++ We need a menu inside each module with at least 3 items: Dashboard (exit session), SOS, Tips.
+

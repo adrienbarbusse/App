@@ -132,7 +132,9 @@ Screens
   1. Title: Required. Max characters limition.
   2. Body text: Optional. Max characters limitation.
   3. Image: Optional. Gif animado.
-  4. Close button. 
+  4. Close button.
+
++ Each item on the screen can have 2 or 3 styles. ej: Title -> big, medium, small. Buttons-UI -> vertical, horizontal. etc... This styles must be predefinied.
 
 + UI components always redirect to a specific and only one screen.
 

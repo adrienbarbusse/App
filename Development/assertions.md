@@ -40,7 +40,7 @@ Profile
 
 + The user can turn off and on a module.
 
-+ The user can not modify other module progiel other than ON/OFF. These are modified depending on the user's interactions in the sessions.
++ The user can not modify other module properties other than ON/OFF. These are modified depending on the user's interactions in the sessions.
 
 + Turn off a module preserve all the data (soft delete).
 
@@ -52,13 +52,17 @@ Blog
 
 + The tags of the blog entries to be shown correspond to the modules profiles.
 
-+ The user will only see 4 entries at a time. **@adrien: Let's talk about this**
++ The user will only see 4 entries at a time (the last 4 by publication date) in the dashboard and a "view all" button
+
++ The "view all" button redirec to a screen with all the entries order by publication date.
+
++ Each entry have a "read time" info [see this for dev](https://www.npmjs.com/package/reading-time)
 
 #### Possible functionalities in upgrades
 
-+ Retrieve the entries from medium.com and store them in the lify database.
++ Retrieve the entries from medium.com and store them in the lify database for consume via lify API.
 
-+ Set entries as read in lify database
++ Set entries as read in lify database.
 
 
 Module
@@ -72,7 +76,7 @@ Module
 
 + When the user reset the module all the data associeted with the module is deleted.
 
-+ Each module will have a menu with: TIPS (access to the tips section) and BACK TO THE DASHBOARD.
++ Each module could have a [SOS](#sos) button/functionality
 
 
 Sessions
@@ -94,7 +98,7 @@ Sessions
 
 + All sessions have an unique "END" screen. (all paths end in the same screen).
 
-+ At the end of the session the user can be redirected to the app dashboard, the next session or start over the finished session again.
++ At the end of the session the user can be redirected to the app dashboard.
 
 #### Possible functionalities in upgrades
 
@@ -134,13 +138,11 @@ Screens
   3. Image: Optional. Gif animado.
   4. Close button.
 
-+ Each item on the screen can have 2 or 3 styles. ej: Title -> big, medium, small. Buttons-UI -> vertical, horizontal. etc... This styles must be predefinied.
++ Each item on the screen can have 2 or 3 styles. ej: Title -> big, medium, small. Buttons-UI -> vertical, horizontal. etc. This styles must be predefinied.
 
 + UI components always redirect to a specific and only one screen.
 
 + UI components can have special functions like "Module Start Over" or "Session Start Over".
-
-+ The LAST screen always have 3 UI: Go to dashboard, session start over & start next session.
 
 :exclamation: **Alert**: In the current wireframe version the only screen "wrong" with the past statements are "NRT No 2" from session 2 and "Calendar" from session 1.2.
 
@@ -152,7 +154,9 @@ Screens
 Tips
 ----
 
-+ Show tips based on a business logic, ej: One per day.
++ Show one tip per day.
+
++ Have a Past tips subsection with a list of all tips readed by the user.
 
 + Each tip is displayed on a single screen.
 
@@ -161,13 +165,11 @@ Tips
   2. Body text: Optional. Max characters limitation.
   3. Image: Optional. Gif animado.
 
-+ After seeing a tip the user returns to the active session.
-
 
 Sos
 ---
 
-+ Button present in each module that gives access to a chat or contact form via [intercom](https://www.intercom.com)
++ Button present in each module dashboard section that gives access to a chat or contact form via [intercom](https://www.intercom.com)
 
 
 

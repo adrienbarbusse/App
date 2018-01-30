@@ -9,6 +9,10 @@ Definitions needed to start programming
 
 + Definition of email and push notifications business logic. 
 
++ List of "What do you for living" select and the relation with the profile entries.
+
++ Maximum age to define a youngster
+
 + **Approval of flows and assertions.**
 
 

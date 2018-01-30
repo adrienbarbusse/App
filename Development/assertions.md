@@ -54,7 +54,7 @@ Blog
 
 + The user will only see 4 entries at a time (the last 4 by publication date) in the dashboard and a "view all" button
 
-+ The "view all" button redirec to a screen with all the entries order by publication date.
++ The "view all" button redirect to a screen with all the entries order by publication date.
 
 + Each entry have a "read time" info [see this for dev](https://www.npmjs.com/package/reading-time)
 
@@ -72,7 +72,7 @@ Module
 
 + A module is accesible from the dashboard page.
 
-+ A module can be reset from the user's profile. (hard delete).
++ A module can be reset from the user's profile.
 
 + When the user reset the module all the data associeted with the module is deleted.
 
@@ -98,7 +98,7 @@ Sessions
 
 + All sessions have an unique "END" screen. (all paths end in the same screen).
 
-+ At the end of the session the user can be redirected to the app dashboard.
++ At the end of the session the user is redirected to the app dashboard.
 
 #### Possible functionalities in upgrades
 
@@ -110,7 +110,7 @@ Sessions
 Screens
 -------
 
-+ The screens can be of four types
++ The screens can be of two types
   1. QA
   4. Slideshow
 
